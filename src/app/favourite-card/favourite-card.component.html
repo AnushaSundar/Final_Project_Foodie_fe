@@ -1,0 +1,28 @@
+<ul class="restaurant-list">
+  <li>
+    <div class="restaurant-item">
+      <a class="anchor" (click)=" onClick()">
+        <img src="http://localhost:9000/image/getimage/{{restaurant.image}}" alt="food Images">
+        <div class="content">
+
+          <div class="name">
+            {{restaurant.name}}
+          </div>
+          <div class="rating">
+            <span>{{restaurant.rating}}</span>
+          </div>
+          <div class="product-iteam-footer">
+            <div class="origins">
+              <span>{{restaurant.city}}</span>
+            </div>
+            <div class="cook-time">
+            </div>
+          </div>
+          <div class="price">{{restaurant.description}}</div>
+
+        </div>
+      </a>
+
+    </div>
+  </li>
+</ul>

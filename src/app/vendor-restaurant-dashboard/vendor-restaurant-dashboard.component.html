@@ -1,0 +1,29 @@
+<div style="display: flex; justify-content: center; align-content: center;" *ngIf="restaurants.length == 0">
+  <div style="padding-top: 25%;">
+  <span>
+    <h2 style="color: black;">
+      <ul>
+        <li>Seems You Are New Here</li>
+        <li> Start By Adding Your First Restaurant</li>
+        <li> Click on the "+" in bottom right corner</li>
+      </ul>
+
+
+  </h2>
+  </span>
+</div>
+</div>
+
+
+<div *ngIf="restaurants.length > 0">
+  <div *ngFor="let restaurant of restaurants" >
+    <app-vendor-restaurant-card (deleted) = "deleted()" [restaurantId] = "restaurant"></app-vendor-restaurant-card>
+  </div>
+</div>
+
+
+<div class="button " style="position: fixed;bottom: 20px;right: 20px;">
+  <button type="button" class="btn btn-floating"(click)="add()" >
+    <i class="fas fa-plus"></i>
+  </button>
+</div>

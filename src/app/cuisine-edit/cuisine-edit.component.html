@@ -1,0 +1,80 @@
+
+
+
+<div class="form-card">
+  <mat-card>
+    <mat-card-title>edit Cuisine </mat-card-title>
+    <mat-card-content>
+
+
+        <div style="margin: 20%; margin-top: 5%; margin-bottom: 10%;"  class="row d-flex justify-content-center align-items-center ">
+          <div style="position: relative;">
+            <!-- {{cuisine.image}} -->
+              <img id="profile-img" style="border-radius: 50%;" src="http://localhost:9000/image/getimage/{{cuisine.image}}"
+
+                  alt="Generic placeholder image" class="img-fluid img-thumbnail ">
+              <button type="button" class="btn btn-outline-dark" (click)="fileInput.click()" data-mdb-ripple-color="dark"
+                  style="       border: none;
+                  position: absolute;
+                  bottom: -40px;
+                  transform: translate(-56%, -34%);
+                  z-index: 2;
+                  font-size: 40px;">
+                  <i class="fas fa-edit"></i>
+              </button>
+          </div>
+      </div>
+
+  <input type="file"  formControlName="image" #fileInput hidden (change)="updateImage($event)">
+
+<form [formGroup]="cuisineForm" (ngSubmit)="onSubmit()">
+  <!-- <label>Fill the cuisine details</label> -->
+  <mat-form-field>
+    <input matInput formControlName="name" placeholder="Name">
+    <mat-error *ngIf="cuisineForm.controls['name'].invalid">Name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput formControlName="description" placeholder="Description"></textarea>
+    <mat-error *ngIf="cuisineForm.controls['description'].invalid">Description is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="price" placeholder="price" id="price" >
+    <mat-error *ngIf="cuisineForm.get('price').hasError('required')">Price is required</mat-error>
+    <mat-error *ngIf="cuisineForm.get('price').hasError('pattern')">Should be a number</mat-error>
+    <mat-error *ngIf="cuisineForm.get('price').hasError('min')">Should be greater than 0</mat-error>
+  </mat-form-field>
+  <!-- <mat-form-field>
+    <input matInput >
+    <mat-error *ngIf="cuisineForm.controls['type'].invalid">Type is required</mat-error>
+  </mat-form-field> -->
+  <!-- <mat-form-field>
+    <input matInput formControlName="tag" placeholder="tag">
+    <mat-error *ngIf="cuisineForm.controls['tag'].invalid">Tag is required</mat-error>
+  </mat-form-field> -->
+
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="type" placeholder="{{cuisine.type}}">
+      <mat-option value="Veg">Veg</mat-option>
+      <mat-option value="Non-Veg">Non-veg</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+    <!-- <mat-error *ngIf="form.controls['image'].invalid">Image is required</mat-error> -->
+
+
+    <button mat-raised-button color="danger" type="submit" *ngIf="cuisineForm.valid">Submit</button>
+    <button mat-raised-button style="background-color: gray;" type="submit" [disabled] *ngIf="cuisineForm.invalid">Submit</button>
+</form>
+
+
+
+
+
+
+</mat-card-content>
+</mat-card>
+</div>

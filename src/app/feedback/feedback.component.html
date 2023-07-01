@@ -1,0 +1,50 @@
+<section style="background-color: #ad655f;">
+  <div class="container my-5 py-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 col-lg-10">
+        <!-- for loop will be added over here  -->
+        <div class="card text-dark" >
+          <div class="card-body p-4">
+            <h4 class="mb-0">Comments</h4>
+            <p class="fw-light mb-4 pb-2">Check Comments section by users</p>
+            <div *ngFor="let feedback of feedBacks" style="margin-bottom: 15px ;">
+
+            <div class="d-flex flex-start">
+              <!-- image part will added here? -->
+              <img class="rounded-circle shadow-1-strong me-3"
+                src="http://localhost:9000/image/getimage/{{feedback.image}}" alt="avatar" width="60"
+                height="60" />
+              <div>
+                <!-- name over here -->
+                <h6 class="fw-bold mb-1">{{feedback.user}}</h6>
+                <div class="d-flex align-items-center mb-3">
+                  <p class="mb-0">
+                  <span class="badge bg-danger">{{feedback.date}}
+                  </span>
+
+                    <span class="badge bg-primary">{{feedback.time}}</span>
+                  </p>
+
+                </div>
+                <!-- comment will add here  -->
+                <p class="mb-0">
+                  {{feedback.feedback}}
+                </p>
+              </div>
+            </div>
+
+          <hr class="my-0" />
+
+
+          <hr class="my-0" style="height: 1px;" />
+
+
+          <hr class="my-0" />
+        </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

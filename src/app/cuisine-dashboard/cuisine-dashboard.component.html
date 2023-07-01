@@ -1,0 +1,46 @@
+<div>
+  <app-info-resturant  (sending)="onChange($event)" (feed)="feed($event)" [restaurantId] = "id"></app-info-resturant>
+</div>
+<hr class="my-4" />
+
+<div *ngIf="!onOpen">
+  <app-feedback [restaurantId] = "id" [feed]="feed1" (feed1) = "feed2($event)"></app-feedback>
+</div>
+<!--
+<div>
+  <div style="display: flex; justify-content: center;" >
+    <button style="display: inherit;" type="button" class="btn btn-light" data-mdb-ripple-color="dark"><mat-icon>map</mat-icon><span>direction</span></button>
+    <button style="display: inherit;" type="button" class="btn btn-light" data-mdb-ripple-color="dark"><mat-icon>bookmark</mat-icon>boolmark</button>
+    <button style="display: inherit;" type="button" class="btn btn-light" data-mdb-ripple-color="dark"><mat-icon>share</mat-icon>share</button>
+    <button style="display: inherit;" type="button" class="btn btn-light" data-mdb-ripple-color="dark"><mat-icon>phone</mat-icon>phone</button>
+
+  </div>
+</div> -->
+
+  <div *ngIf="onOpen">
+  <div style="display: flex; justify-content: space-between;" >
+
+  <div style="padding-left: 15%;">
+    All
+    <mat-slide-toggle  class="custom-slide-toggle" (change)="cuisneFilter($event)" name="veg">Veg</mat-slide-toggle>
+  </div>
+  <div style="display: flex; padding-right: 15%;">
+    <input [(ngModel)]="cuisineName" type="search" placeholder="Search Cuisine By Name" aria-label="Search" style="background-color: white" > &nbsp;
+    <!-- style="border-top-left-radius: 30% ; border-bottom-left-radius: 30%;"> -->
+    <button  class="btn  btn-primary " (click)="search()" type="submit" style="border-top-right-radius: 45% ; border-bottom-right-radius: 45%; border: 0.2px solid; "><i class="fas fa-search"></i></button>
+  </div>
+
+</div>
+
+
+<div *ngIf="cuisines.length == 0" style="display: flex; justify-content: center; color: red; padding-top: 10%;">
+  NO Cuisine Present!!
+</div>
+<div *ngIf="cuisines.length > 0">
+
+<div  style="margin-top: 30px;"  *ngFor="let cuisine of cuisines"  >
+  <app-cuisine-cards [cuisine]="cuisine" > </app-cuisine-cards>
+</div>
+</div>
+</div>
+

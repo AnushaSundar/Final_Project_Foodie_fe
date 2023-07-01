@@ -1,0 +1,35 @@
+.cuisine-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cuisine-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.rating {
+  color:rgb(87, 87, 87);
+}
+
+.price {
+  color: #28a745;
+}
+
+.add-to-cart-btn {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}
+img:hover{
+  transform: scale(1.05);
+  opacity: 0.8;
+
+}

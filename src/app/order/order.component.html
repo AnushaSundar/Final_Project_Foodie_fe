@@ -1,0 +1,59 @@
+<!-- <h2>Order History</h2>
+<br>
+<div *ngFor="let order of orders">
+    <div>
+    <h5>Items Ordered</h5>
+    <div *ngFor="let cuisine of order.cuisines">
+        <h6> {{cuisine.name}}</h6>
+    </div>
+    <h4>Total Bill Amount : {{order.totalBillAmount}}</h4>
+</div>
+<br>
+</div> -->
+
+
+
+<div class="container mt-5">
+  <div class="d-flex justify-content-center row">
+      <div class="col-md-10">
+          <div class="rounded">
+              <div class="table-responsive table-borderless">
+                <h2>Order List</h2>
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <!-- <th class="text-center">
+                                  <div class="toggle-btn">
+                                      <div class="inner-circle"></div>
+                                  </div>
+                              </th> -->
+                              <!-- <th>Order #</th> -->
+
+                              <th>Time</th>
+                              <th>Total</th>
+                              <th>Date</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody class="table-body">
+                              <!-- <td class="text-center">
+                                  <div class="toggle-btn">
+                                      <div class="inner-circle"></div>
+                                  </div>
+                              </td> -->
+
+
+                                 <tr class="cell-1" *ngFor="let value of orders" >
+
+                                  <td>{{value.time}}</td>
+                                  <td>₹ {{value.totalBillAmount}}</td>
+                                  <td>{{value.date}}</td>
+                                 <td>thanks for ordering</td>
+                                </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

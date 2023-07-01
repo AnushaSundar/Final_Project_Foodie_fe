@@ -1,0 +1,11 @@
+
+  <div *ngIf="restaurants.length == 0 || restaurants.length == null" style="display: flex; justify-content: center; padding-top: 10%; ">
+    Please Add Some Restaurants To Favourite First!!
+  </div>
+  <div *ngIf="restaurants.length > 0 ">
+    <div class="restaurant-grid">
+  <div  *ngFor="let restaurant of restaurants">
+    <app-favourite-card [restaurantId]="restaurant" > </app-favourite-card>
+  </div>
+  </div>
+</div>

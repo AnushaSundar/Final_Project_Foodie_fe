@@ -1,0 +1,55 @@
+<!-- <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+  <label>Name:</label>
+  <input type="text" formControlName="name" />
+
+  <label>Mobile No. :</label>
+  <input type="text" formControlName="number" />
+
+  <label>Street:</label>
+  <input type="text" formControlName="street" />
+
+  <label>City:</label>
+  <input type="text" formControlName="city" />
+
+  <label>Locality:</label>
+  <input type="text" formControlName="locality" />
+
+  <button type="submit"[disabled]="addressForm.invalid">Submit</button>
+</form> -->
+<mat-card>
+
+<mat-card-title>Update address</mat-card-title>
+
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput formControlName="name" placeholder=" " readonly>
+    <!-- <mat-error *ngIf="addressForm.controls['name'].invalid">Name is required</mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput formControlName="number" placeholder="Mobile No.">
+    <mat-error *ngIf="addressForm.controls['number'].invalid">Mobile No is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+      <input matInput formControlName="street" placeholder="Street">
+    <mat-error *ngIf="addressForm.controls['street'].invalid">Street is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="city" placeholder="City">
+    <mat-error *ngIf="addressForm.controls['city'].invalid">City is required</mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <input matInput formControlName="locality" placeholder="Locality">
+    <mat-error *ngIf="addressForm.controls['locality'].invalid">Locality is required</mat-error>
+  </mat-form-field>
+  <!-- <button mat-raised-button color="primary" type="submit" [disabled]="addressForm.invalid">Submit</button>
+   -->
+   <button mat-raised-button color="danger" type="submit" *ngIf="addressForm.valid">Submit</button>
+         <button mat-raised-button style="background-color: gray;" type="submit" [disabled] *ngIf="addressForm.invalid">Submit</button>
+</form>
+
+</mat-card>

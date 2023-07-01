@@ -1,0 +1,64 @@
+
+<form [formGroup]="cuisineForm" (ngSubmit)="onSubmit()">
+  <label>Fill the cuisine details</label>
+  <mat-form-field>
+    <input matInput formControlName="name" placeholder="Name">
+    <mat-error *ngIf="cuisineForm.controls['name'].invalid">Name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput formControlName="description" placeholder="Description"></textarea>
+    <mat-error *ngIf="cuisineForm.controls['description'].invalid">Description is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="price" placeholder="price" id="price" >
+    <mat-error *ngIf="cuisineForm.get('price').hasError('required')">Price is required</mat-error>
+    <mat-error *ngIf="cuisineForm.get('price').hasError('pattern')">Should be a number</mat-error>
+    <mat-error *ngIf="cuisineForm.get('price').hasError('min')">Should be greater than 0</mat-error>
+  </mat-form-field>
+    <!-- <mat-error *ngIf="cuisineForm.controls['price'].invalid">Price is required</mat-error> -->
+    <!-- <mat-error *ngIf="price.hasError('pattern')">
+      Please enter a valid number
+    </mat-error> -->
+
+
+  <!-- <mat-form-field>
+    <input matInput >
+    <mat-error *ngIf="cuisineForm.controls['type'].invalid">Type is required</mat-error>
+  </mat-form-field> -->
+  <!-- <mat-form-field>
+    <input matInput formControlName="tag" placeholder="tag">
+    <mat-error *ngIf="cuisineForm.controls['tag'].invalid">Tag is required</mat-error>
+  </mat-form-field> -->
+
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="type" placeholder="type">
+      <mat-option value="Veg">Veg</mat-option>
+      <mat-option value="Non-Veg">Non-Veg</mat-option>
+
+    </mat-select>
+  </mat-form-field> -->
+  <mat-form-field appearance="fill">
+    <mat-label>type</mat-label>
+    <mat-select formControlName="type" placeholder="type">
+       <mat-option value="Veg">Veg</mat-option>
+      <mat-option value="Non-Veg">Non-Veg</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+    <input type="file" (change)="onFileSelected($event)" formControlName="image">
+    <!-- <mat-error *ngIf="form.controls['image'].invalid">Image is required</mat-error> -->
+
+
+    <button mat-raised-button color="danger" type="submit" *ngIf="cuisineForm.valid">Submit</button>
+    <button mat-raised-button style="background-color: gray;" type="submit" [disabled] *ngIf="cuisineForm.invalid">Submit</button>
+</form>
+
+
+
+
+
+

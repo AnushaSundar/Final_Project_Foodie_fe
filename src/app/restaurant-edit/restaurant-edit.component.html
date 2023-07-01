@@ -1,0 +1,104 @@
+<!-- <div class="form-card">
+  <mat-card>
+    <mat-card-title>Register</mat-card-title>
+    <mat-card-content>
+      <div style="border: 2px solid blue;"  class="row d-flex justify-content-center align-items-center h-100">
+        <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+            alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+            style="width: 150px; z-index: 1">
+          <button type="button" class="btn btn-outline-dark" (click)="fileInput.click()" data-mdb-ripple-color="dark"
+            style="z-index: 1;">
+            <i  class="fas fa-edit"></i>
+          </button>
+        </div>
+      </div>
+  <input type="file"  formControlName="image" #fileInput hidden> -->
+  <!-- <button type="button" (click)="fileInput.click()">Edit</button> -->
+  <!-- #href> -->
+  <!-- (change)="onFileSelected($event)" -->
+<!-- <form [formGroup]="form" (ngSubmit)="submitForm()">
+
+<mat-form-field>
+  <input matInput formControlName="name" placeholder="Name">
+  <mat-error *ngIf="form.controls['name'].invalid">Name is required</mat-error>
+</mat-form-field>
+
+<mat-form-field>
+  <textarea matInput formControlName="description" placeholder="Description"></textarea>
+  <mat-error *ngIf="form.controls['description'].invalid">Description is required</mat-error>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput formControlName="city" placeholder="City">
+  <mat-error *ngIf="form.controls['city'].invalid">City is required</mat-error>
+</mat-form-field>
+
+
+
+
+
+<button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+</mat-card-content>
+</mat-card>
+</div> -->
+
+
+
+
+<div class="form-card">
+  <mat-card>
+    <mat-card-title>edit </mat-card-title>
+    <mat-card-content>
+
+
+        <div style="margin: 20%; margin-top: 5%; margin-bottom: 10%;"  class="row d-flex justify-content-center align-items-center ">
+          <div style="position: relative;">
+              <img style="border-radius: 50%;" id="profile-img" src="http://localhost:9000/image/getimage/{{restaurant.image}}"
+                  alt="Generic placeholder image" class="img-fluid img-thumbnail ">
+              <button type="button" class="btn btn-outline-dark" (click)="fileInput.click()" data-mdb-ripple-color="dark"
+                  style="       border: none;
+                  position: absolute;
+                  bottom: -40px;
+                  transform: translate(-56%, -34%);
+                  z-index: 2;
+                  font-size: 40px;">
+                  <i class="fas fa-edit"></i>
+              </button>
+          </div>
+      </div>
+
+  <input type="file"  formControlName="image" #fileInput hidden  (change)="updateImage($event)">
+
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+
+<mat-form-field>
+  <input matInput formControlName="name" placeholder="Name">
+  <mat-error *ngIf="form.controls['name'].invalid">Name is required</mat-error>
+</mat-form-field>
+
+<mat-form-field>
+  <textarea matInput formControlName="description" placeholder="Description"></textarea>
+  <mat-error *ngIf="form.controls['description'].invalid">Description is required</mat-error>
+</mat-form-field>
+
+<!-- <mat-form-field>
+  <input matInput formControlName="city" placeholder="City">
+  <mat-error *ngIf="form.controls['city'].invalid">City is required</mat-error>
+</mat-form-field> -->
+
+<mat-form-field>
+<mat-select formControlName="city" placeholder="{{restaurant.city}}">
+  <mat-option  *ngFor="let city of cities" value="{{city}}">{{city}}</mat-option>
+</mat-select>
+</mat-form-field>
+
+
+  <!-- <button mat-raised-button color="primary" type="submit">Submit</button> -->
+  <button mat-raised-button color="danger" type="submit" *ngIf="form.valid">Submit</button>
+  <button mat-raised-button style="background-color: gray;" type="submit" [disabled] *ngIf="form.invalid">Submit</button>
+  </form>
+</mat-card-content>
+</mat-card>
+</div>

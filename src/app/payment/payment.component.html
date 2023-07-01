@@ -1,0 +1,24 @@
+<div style="display: flex; justify-content: center;">
+  <div>
+ Payment:- Cash On Delivery
+</div>
+<div>
+<div>
+  Delivery to: {{address.name}} , {{address.city}}
+  Contact : {{address.number}}
+</div>
+<div style="display: flex; justify-content: center;" >
+<div>
+  Your Order
+</div>
+<div *ngFor="let cuisine of cuisines">
+{{cuisine.name}}:  X{{cuisine.quantity}}
+</div>
+<div>
+  Your Total :- {{total}}
+</div>
+<div>
+  <button (click)="order()">Confirm Your Order</button>
+</div>
+</div>
+

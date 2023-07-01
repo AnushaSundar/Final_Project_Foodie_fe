@@ -1,0 +1,56 @@
+<!-- <div *ngIf="vendor1()" style="display: flex;justify-items: center; align-items: center; ">
+  <div style="display: flex;justify-items: center; align-items: center; grid-row-end: ;">
+    <div >
+    <span><h2>You Have already Registerd as vendor</h2></span><br><br><br>
+  </div>
+  <div><span>Go To</span></div></div>
+
+  <div style="display: flex;">
+    <a routerLink="/dashboard"> <button mat-raised-button color="danger" type="submit" >Dashboard</button></a>
+    <a routerLink="/vendorRestaurantDashboard"><button mat-raised-button color="danger" type="submit">Add Restaurant</button></a>
+  </div>
+</div> -->
+<!-- </div> -->
+
+
+
+<div class="card-container" *ngIf="vendor1()">
+  <div class="card">
+    <div style="padding-bottom: 10%;">
+      <h2 style="color: green;">You Have already Registerd as vendor</h2>
+    </div >
+    <div style="padding-bottom: 5%;">
+      <span><h4>Go To</h4></span>
+    </div>
+    <div class="card-buttons">
+      <a routerLink="/dashboard">
+        <button mat-raised-button color="danger" type="submit">Dashboard</button>
+      </a>
+      <a routerLink="/vendorRestaurantDashboard">
+        <button mat-raised-button color="danger" type="submit">Add Restaurant</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<Form [formGroup]="vendorForm" class="form-container" (ngSubmit)="onSubmit()" *ngIf="!vendor1()">
+  <mat-checkbox [formControl]="vendor" required>I have read and agreed to T&C which I have no access to read</mat-checkbox>
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Enter Password to confirm</mat-label>
+  <input matInput placeholder="Password" [formControl]="password" required type="password">
+  <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+  <div>
+     <!-- <button mat-raised-button color="primary" type="submit" [disabled]="!vendorForm.valid">Register as vendor </button>
+     -->
+     <button mat-raised-button color="danger" type="submit" *ngIf="vendorForm.valid">Register as vendor</button>
+         <button mat-raised-button style="background-color: gray;" type="submit" [disabled] *ngIf="vendorForm.invalid">Register as vendor</button>
+  </div>
+</Form>
+

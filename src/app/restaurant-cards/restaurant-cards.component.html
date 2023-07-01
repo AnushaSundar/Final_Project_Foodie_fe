@@ -1,0 +1,85 @@
+<!-- <div class="card">
+  <img class="card-img-top" src="http://localhost:9000/image/getimage/{{restaurant.image}}" alt="{{restaurant.name}}">
+  <div class="card-body">
+    <h5 class="card-title">{{restaurant.name}}</h5>
+    <p class="card-text">Rating: {{restaurant.rating}}</p>
+  </div>
+</div> -->
+
+<!-- <app-not-found [visible]="!foods || foods.length <=0" resetLinkText="reset Search"></app-not-found>
+<ul>
+    <li *ngFor="let food of foods">
+        <a class="anchor" >
+        <img src="{{food.imageUrl}}" alt="food Images">
+        <div class="content">
+            <div class="name">
+                {{food.name}}
+            <span class="favorite {{food.favorite?'':'not'}}">♥</span>
+
+            </div>
+
+           <div>
+            <span>
+            <ngb-rating [rate]="food.star"  [readonly]="true"></ngb-rating>
+            </span>
+            </div>
+            <div class="product-iteam-footer">
+                <div class="origins">
+                    <span >
+                        {{food.origins}}
+                    </span>
+                </div>
+                <div class="cook-time">
+                    <span>🕐</span>{{food.cookTime}}
+                </div>
+            </div>
+            <div class="price">{{food.price|currency}}</div>
+
+        </div>
+
+            <button class="buttonLink" (click)="clickToCart(food)" >addToCart</button>
+
+
+    </a>
+
+    <div>
+
+
+    </div>
+    </li>
+</ul> -->
+
+
+
+
+<ul class="restaurant-list" >
+  <li>
+    <div class="restaurant-item" >
+      <a class="anchor">
+        <img src="http://localhost:9000/image/getimage/{{restaurant.image}}" alt="food Images"  (click)="onClick()">
+        <div class="content" style="background-color: white;">
+          <div class="name">
+            <p (click)="onClick()" >
+            {{restaurant.name}}
+            </p>
+            <!-- <span class="favorite">♥️</span> -->
+          </div>
+          <div class="rating" >
+            <span>Rating: {{restaurant.rating}}</span>
+            <span style="color: gold;">★</span>
+          </div>
+          <div class="product-iteam-footer">
+            <div class="origins">
+              <span>{{restaurant.city}}</span>
+            </div>
+            <!-- <div class="cook-time">
+              <span>🕐</span>20:20
+            </div> -->
+          </div>
+          <div class="price">{{restaurant.description}}</div>
+        </div>
+      </a>
+      <!-- <button class="buttonLink" (click)="clickToCart(food)">addToCart</button> -->
+    </div>
+  </li>
+</ul>

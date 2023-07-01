@@ -1,0 +1,94 @@
+<section class="">
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+      <!--  ;  -->
+      <div style="background-color:rgb(223, 229, 229);" class="div-image">
+        <img style="background-size: cover; max-width: 30%;" src="http://localhost:9000/image/getimage/{{restaurant.image}}" height="400px" width="100%"  class="image " alt="">
+      </div>
+
+      <div class="col-lg-9 vh-40">
+        <div class="p-4 shadow-4 rounded-3" style="background-color: hsla(0, 0%, 94%, 0.764);">
+          <h2>{{restaurant.name}}</h2>
+        <h3>{{restaurant.city}}</h3>
+          <!-- <p>
+            This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content
+            or information.
+          </p> -->
+
+          <hr class="my-4" />
+
+          <p>
+            Decription:{{restaurant.description}}
+          </p>
+          <hr class="my-4" />
+
+          <button type="button" class="btn btn-primary" (click)="onClick(true)" >
+            Menu
+          </button>
+          <button type="button" class="btn btn-primary" (click)="onClick(false)">
+            Feedback
+          </button>
+        </div>
+      </div>
+<!-- main container? -->
+      <div  class="col-lg-3 vh-40" style="margin: auto; " >
+        <div class="normal1" style="    display: flex;margin-bottom: 4rem;
+        align-items: center;
+        justify-content: space-around;">
+
+        <div *ngIf="isLoggedIn">
+         <div class="count"  (mouseover)="hover2()"  (mouseout)="leave1()" *ngIf="!hover1">
+            <div class="stars">
+              <ngx-star-rating [(ngModel)]="rating3" [id]="'rating3'" >
+               <!-- (click)="change()" -->
+               </ngx-star-rating>
+            </div>
+            <div class="rate">Rating: {{ rating3 }}</div>
+          </div>
+          <div class="count" (mouseover)="hover2()" (mouseout)="leave1()" *ngIf="hover1">
+            <div class="stars">
+              <ngx-star-rating [(ngModel)]="rating3" [id]="'rating3'" (click)="change()"></ngx-star-rating>
+            </div>
+            <div class="rate">Your Rating: {{ rating3 }}</div>
+          </div>
+        </div>
+
+        <div *ngIf="!isLoggedIn">
+
+          <div class="count"  >
+            <div class="stars">
+              <ngx-star-rating [(ngModel)]="rating3" [id]="'rating3'" (click)="notLoggedIn()" [disabled] ="true" >
+               <!-- (click)="change()" -->
+               </ngx-star-rating>
+            </div>
+            <div class="rate">Rating: {{ rating3 }}</div>
+          </div>
+        </div>
+
+
+          <div class="buttons">
+            <button class="heart" *ngIf="isLiked" (click)="unlike()">
+              <i class="fas fa-heart"></i>
+            </button>
+            <button class="heart" *ngIf="!isLiked" (click)="like()">
+              <i style="color:grey;" class="fas fa-heart"></i>
+            </button>
+          </div>
+        </div>
+<!-- ratting  -->
+
+        <!-- feedback  -->
+        <div class="form-group shadow-textarea" style="position: relative;">
+          <label for="exampleFormControlTextarea6">feedback</label>
+          <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" [(ngModel)]="text"
+            placeholder="Write feedback here..."></textarea>
+        <button type="button"  style="position: absolute; bottom: 0;right: -16px; background-color: transparent;
+        color: rebeccapurple;" (click)="feedback(text)" class="btn btn-primary">
+          <mat-icon>send</mat-icon>
+        </button>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+

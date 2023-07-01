@@ -1,0 +1,66 @@
+/* mat-card {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+} */
+/* Style for the card title */
+mat-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Style for the card container */
+mat-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the form fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Style for the input field */
+input {
+  width: 100%;
+  font-size: 16px;
+}
+
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0b7dda;
+}
+
+
+mat-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+}

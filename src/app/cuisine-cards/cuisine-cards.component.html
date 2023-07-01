@@ -1,0 +1,36 @@
+<section class="bg-light">
+  <div class="container ">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-10">
+        <div class="card mb-4 cuisine-card">
+          <div class="row g-0">
+            <div class="col-12 col-md-3">
+              <img src="http://localhost:9000/image/getimage/{{cuisine.image}}" class="img-fluid rounded-3" alt="Cuisine Image" style="max-height: 200px;">
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card-body">
+                <h2 class="card-title">{{cuisine.name}}</h2>
+                <p class="card-text" *ngIf="cuisine.type === 'Veg' "><small class="text-muted"> <img src="../../assets/images/Veg.png"  width="15px"> {{cuisine.type}}</small></p>
+                <p class="card-text" *ngIf="cuisine.type != 'Veg'" ><small class="text-muted"> <img src="../../assets/images/Non-Veg.png" width="15px"> {{cuisine.type}}</small></p>
+                <div class="d-flex align-items-center">
+                  <span class="me-2 rating">{{cuisine.description}}</span>
+                  <div class="rating-stars">
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <h5 class="card-title price">₹{{cuisine.price}}</h5>
+                <button class="btn btn-primary mt-3" (click)="addCart()" *ngIf="!addedToCart">Add to Cart</button>
+                <button class="btn btn-primary mt-3" (click)="delete(cuisine)" style="background-color: gray;"  *ngIf="addedToCart">Added To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

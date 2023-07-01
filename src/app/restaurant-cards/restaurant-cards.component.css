@@ -1,0 +1,205 @@
+/* .card {
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+} */
+
+
+/* ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+.anchor{
+  height: 28rem;
+  width: 22rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+}
+li a:hover{
+  box-shadow: 0px 0px 5px 0px;
+  opacity: 0.9;
+
+}
+.content{
+  padding: 2rem 1rem;
+  position: relative;
+
+}
+.favorite{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+
+}
+.favorite.not{
+  color: black;
+}
+.star{
+  margin-bottom: .2rem;
+
+}
+.product-iteam-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.origins{
+  flex: 9;
+}
+.origins span{
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  color: grey;
+  font-size: 1rem;
+  margin-right: .3rem;
+}
+.cook-time{
+  font-size: 1rem;
+  flex: 3;
+  text-align: center;
+
+}
+.price{
+  color: grey;
+  margin-top: .2rem;
+}
+.buttonLink{
+  color: white;
+  background-color:#e72929;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0px 7rem;
+
+} */
+
+
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+ul{
+
+  list-style-type: none;
+  padding: 40px;
+}
+.anchor {
+  /* display: block; */
+  height: 28rem;
+  width: 22rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+  background-color: white;
+}
+
+img {
+  max-height: 300px;
+}
+
+li a:hover{
+  box-shadow: 0px 0px 5px 0px;
+  opacity: 0.9;
+
+}
+
+.content {
+  padding: 1rem 1rem;
+  position: relative;
+}
+/* change 1 */
+.name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favorite {
+  /* font-size: 2rem; */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+}
+
+.star {
+  margin-bottom: 0.2rem;
+}
+
+.rating {
+  margin-bottom: 0.5rem;
+}
+
+.product-iteam-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.origins {
+  flex: 9;
+}
+
+.origins span {
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  color: grey;
+  font-size: 1rem;
+  margin-right: 0.3rem;
+}
+
+.cook-time {
+  font-size: 1rem;
+  flex: 3;
+  text-align: center;
+}
+
+.price {
+  color: grey;
+  margin-top: 0.2rem;
+}
+
+.buttonLink {
+  color: white;
+  background-color: #e72929;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .restaurant-item {
+    width: 100%;
+  }
+  
+}

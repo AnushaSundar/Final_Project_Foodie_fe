@@ -1,0 +1,143 @@
+section {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  }
+
+  img {
+  display: block;
+  margin: 0 auto;
+  }
+
+  .col-lg-9 {
+  padding: 1rem;
+  }
+
+  h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  }
+  /* .div-image { */
+    /* background-image: url(../../assets/images/full1.png);
+    background-color: rgb(223, 229, 229); */
+    /* filter: blur(5px); */
+  /* } */
+
+  .image {
+    /* background-size: cover;
+    max-width: 30%;
+    height: 400px;
+    width: 100%;
+    filter: none; remove blur effect */
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    padding: 10px;
+    background-color: white;
+    margin: 1px solid black;
+  }
+
+  p {
+  font-size: 1 rem;
+  line-height: 1.5;
+  }
+
+  .btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  }
+
+  .heart {
+  background-color: transparent;
+  color: rgb(228, 10, 47);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0;
+  position: relative;
+  }
+
+  .heart:hover i {
+  animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+  0% {
+  transform: scale(1);
+  }
+  50% {
+  transform: scale(1.2);
+  }
+  100% {
+  transform: scale(1);
+  }
+  }
+
+
+  /* .stars .ngx-star-rating-container .ngx-star .ngx-star-icon {
+  font-size: 0.5rem !important;
+  } */
+
+
+  textarea {
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  width: 100%;
+  resize: none;
+  }
+
+  .form-group {
+  margin-bottom: 1rem;
+  }
+
+  @media (max-width: 991.98px) {
+  section {
+  padding: 2rem;
+  }
+
+  .col-lg-9 {
+  padding: 0;
+  }
+
+  h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  }
+
+  p {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  }
+
+  .btn {
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  }
+
+  .heart {
+  font-size: 1.5rem;
+  }
+
+  .count {
+  margin-bottom: 1rem;
+  }
+
+  .form-group {
+  margin-bottom: 0.5rem;
+  }
+
+
+  }
+
+
+  ::ng-deep label.star{
+    padding: 2px !important;
+    font-size: 20px !important;
+  }
+

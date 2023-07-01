@@ -1,0 +1,101 @@
+/* .example-spacer {
+  flex: 1 1 auto;
+} */
+
+
+/* .example-spacer {
+  flex: 1 1 auto;
+} */
+
+::placeholder {
+  color: whitesmoke;
+}
+.navbar {
+  background: linear-gradient(45deg, #EE82EE , #292527);
+  border-bottom: 2px solid #fff;
+}
+
+.navbar-brand img {
+  height: 58px;
+  margin-right: 10px;
+}
+
+.navbar-toggler {
+  border-color: rgba(255,255,255,.1);
+}
+
+.navbar-toggler span i {
+  color: #fff;
+}
+
+.dropdown-menu {
+  background-color: white;
+  border: none;
+}
+
+.dropdown-menu a {
+  color: #fff !important;
+}
+
+.badge {
+  background-color: #fff;
+  color: black;
+}
+
+.search-container input {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.search-container input:focus {
+  background-color: #fff;
+  color: black;
+}
+
+.search-container button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.search-container button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+
+.city-select label {
+  color: #fff;
+  margin-right: 5px;
+}
+
+.city-select select {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.city-select select:hover {
+  background-color: #fff;
+  color: black;
+
+}
+
+
+.nav-link.dropdown-toggle {
+  color: #fff !important;
+}
+
+.nav-link.dropdown-toggle img {
+  margin-right: 5px;
+}
+
+.dropdown-menu-end a {
+  color: black !important;
+}
+
+.dropdown-divider {
+  border-top-color: rgba(255,255,255,.1);
+}
+

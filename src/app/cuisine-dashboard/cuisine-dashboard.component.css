@@ -1,0 +1,9 @@
+::ng-deep .mat-slide-toggle[name="veg"].mat-checked .mat-slide-toggle-bar {
+  background-color: green;
+}
+.custom-slide-toggle.mat-slide-toggle-checked .mat-slide-toggle-thumb {
+  background-color: green !important;
+}
+.custom-slide-toggle.mat-slide-toggle-checked .mat-slide-toggle-bar {
+  background-color: rgba(0, 128, 0, 0.38) !important;
+}

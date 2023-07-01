@@ -1,0 +1,134 @@
+<!-- <p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Foodie</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p> -->
+
+
+
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/images/mini-removebg-preview.png" height="60px" width="60px" alt="MDB Logo">
+        <p style="color: black;  "><b><I>FoOdIe App</I></b></p>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"> <i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Vendor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cuisine</a>
+          </li> -->
+        </ul>
+        <!-- <div class="d-flex">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              City
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Bangalore</a></li>
+              <li><a class="dropdown-item" href="#">Mumbai</a></li>
+              <li><a class="dropdown-item" href="#">Delhi</a></li>
+            </ul>
+          </div>
+          <div class="d-flex ms-3">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+          </div>
+        </div> -->
+
+
+
+
+
+       <mat-icon class="navbar-nav ms-auto mb-2 mb-lg-0" *ngIf="!loggedIn" (click) = "goToLogin()">login</mat-icon>
+
+        <ul  *ngIf="loggedIn" class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/cart"><i class="fas fa-shopping-cart"></i><span class="badge rounded-pill bg-light text-dark ms-1">{{cartLength}}</span></a>
+            </li>
+          </div>
+        <div>
+
+        </div>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/favorite">  <i class="fas fa-heart fa-lg"></i><span class="badge rounded-pill bg-light text-dark ms-1"></span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="http://localhost:9000/image/getimage/{{user.image}}" class="rounded-circle me-2" height="30" >
+              {{user.name}}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="userEdit">My Profile</a></li>
+              <li><a class="dropdown-item" routerLink="/order">Order-History</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item"  (click)="logOut()">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      </div>
+      </nav>
+      </div>
+
+
+
+
+
+
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="30" alt="MDB Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"> <i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              </ul>
+
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i><span class="badge rounded-pill bg-light text-dark ms-1">1</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle me-2" height="30" alt="Black and White Portrait of a Man">
+                    Username
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav> -->

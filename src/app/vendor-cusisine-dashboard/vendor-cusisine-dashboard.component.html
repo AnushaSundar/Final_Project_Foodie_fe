@@ -1,0 +1,12 @@
+<div *ngFor="let cuisine of cuisines">
+  <app-vendor-cusisine-card [cuisine] = "cuisine" [restaurantId]="id" (deleted)="deleted()"></app-vendor-cusisine-card>
+</div>
+
+
+
+
+<div class="button " style="position: fixed;bottom: 20px;right: 20px;">
+  <button type="button" class="btn btn-floating"(click)="add()" >
+    <i class="fas fa-plus"></i>
+  </button>
+</div>

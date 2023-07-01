@@ -1,0 +1,76 @@
+/* .form-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+mat-card {
+  width: 400px;
+}
+span{
+  color: red;
+} */
+
+
+.form-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+mat-card {
+  max-width: 400px;
+  width: 100%;
+}
+
+mat-card-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+mat-error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+/* Style the file input button */
+/* input[type="file"] {
+  display: none;
+} */
+
+div p {
+  margin-bottom: 0.5rem;
+}
+
+div input[type="file"] + label {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+div input[type="file"] + label:hover {
+  background-color: #0d8cf0;
+}
+
+
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
